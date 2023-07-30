@@ -3,6 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #6E260E;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #6E260E;
+  text-align: center;
+  margin: 30px 0 0 0;
 }
 
 .cartItem {
@@ -28,6 +37,19 @@
 
 }
 
+.subtotal {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    color: #333;
+}
+
 .countHandler input {
   width: 40px;
   text-align: center;
@@ -43,6 +65,15 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #6E260E;
 }
 
 /* Responsive styles */
@@ -67,5 +98,8 @@
     align-items: center;
   }
 
- 
+  .heading {
+    font-size: 24px; 
+  }
+
 }

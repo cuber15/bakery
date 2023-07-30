@@ -60,15 +60,19 @@ export const ShopContextProvider = (props) => {
 
   const checkout = useCallback(() => {
     let currentItemsInCart = [];
-    PRODUCTS.map(produt => {
+
+    PRODUCTS.map(product => {
       for (const key in cartItemObject) {
-        if(produt.id == key){
-          const currentItem = {Name : produt.name, UnitPrice : produt.price, Quantity : cartItemObject[key], TotalPrice : produt.price * cartItemObject[key]}
+        if(product.id == key){
+          const currentItem = {Name : product.name, UnitPrice : product.price, Quantity : cartItemObject[key], TotalPrice : product.price * cartItemObject[key]}
           currentItemsInCart.push(currentItem);
         }
       }
     })
-    console.log('CART ITEM ::',currentItemsInCart);
+
+    const totalPrice = getTotalCartAmount();
+    const checkoutBag = {Items : currentItemsInCart, TotalPrice : totalPrice};
+    console.log('CART ITEM ::',checkoutBag);
     setCartItems(getDefaultCart());
   },[cartItemObject]);
 

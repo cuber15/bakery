@@ -10,14 +10,14 @@ export const PRODUCTS = [
       {
         id: 3,
         name: "Blueberry Muffin",
-        description: "A soft muffin filled with juicy blueberries.",
+        description: "Delicious blueberry muffins, bursting with fresh, juicy goodness.",
         price: 110,
         image: blueberry
       },
       {
         id: 4,
         name: "Almond Danish",
-        description: "A sweet Danish pastry filled with almond paste.",
+        description: "A sweet Danish pastry, a flaky delight filled with almond paste.",
         price: 200,
         image: almond
       },
@@ -31,21 +31,21 @@ export const PRODUCTS = [
       {
         id: 6,
         name: "Cinnamon Roll",
-        description: "A swirl of cinnamon and sugar baked into a soft, fluffy roll.",
+        description: "A swirl of cinnamon and sugar baked into a soft and fluffy roll.",
         price: 175,
         image: cinammom
       },
       {
         id: 1,
         name: "Croissant",
-        description: "A buttery, flaky pastry named for its crescent shape.",
+        description: "Authentic butter croissant, a french classic with golden, flaky layers.",
         price: 100,
         image: croissant
       },
       {
         id: 2,
         name: "Chocolate Cake",
-        description: "A rich and moist chocolate cake with chocolate frosting.",
+        description: "A moist chocolate cake with chocolate frosting for chocolate lovers",
         price: 400,
         image: chocolateCake
       }
