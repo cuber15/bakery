@@ -14,7 +14,7 @@ Please ensure that you have the following installed on your system:
 `git clone https://github.com/cuber15/bakery.git `
 
 2. **Navigate to the project folder:**
-`cd bakery-app`
+`cd bakery`
 
 3. **Install the required dependencies:**
 `npm install`

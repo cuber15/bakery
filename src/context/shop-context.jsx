@@ -49,6 +49,7 @@ export const ShopContextProvider = (props) => {
       if (newCartItems[itemId] >= 1) {
         newCartItems[itemId] -= 1;
       }
+      return newCartItems;
     });
 
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
