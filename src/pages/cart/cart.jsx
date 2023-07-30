@@ -3,6 +3,7 @@ import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../assets/product"
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
+import emptycart from "../../assets/images/emptyCart.gif"
 
 import "./cart.css";
 export const Cart = () => {
@@ -40,7 +41,10 @@ export const Cart = () => {
           </button>
         </div>
       ) : (
+        <>
         <h1> Your Shopping Cart is Empty</h1>
+        <img className="bake" src={emptycart}/>
+        </>
       )}
     </div>
   );
