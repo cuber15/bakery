@@ -41,6 +41,7 @@ export const ShopContextProvider = (props) => {
       ...prevCartItems,
       [itemId]: (prevCartItems? prevCartItems[itemId] || 0: 0) + 1, }));
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+
   };
 
   const removeFromCart = (itemId) => {
@@ -64,7 +65,7 @@ export const ShopContextProvider = (props) => {
 
     PRODUCTS.map(product => {
       for (const key in cartItemObject) {
-        if(product.id == key){
+        if(product.id == key && cartItemObject[key]){
           const currentItem = {Name : product.name, UnitPrice : product.price, Quantity : cartItemObject[key], TotalPrice : product.price * cartItemObject[key]}
           currentItemsInCart.push(currentItem);
         }
@@ -75,6 +76,7 @@ export const ShopContextProvider = (props) => {
     const checkoutBag = {Items : currentItemsInCart, TotalPrice : totalPrice};
     console.log('CART ITEM ::',checkoutBag);
     setCartItems(getDefaultCart());
+    setCartItemObject({});
   },[cartItemObject]);
 
   const contextValue = {
