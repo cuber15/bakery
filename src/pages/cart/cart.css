@@ -41,6 +41,7 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    justify-content: center;
     padding: 10px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -48,12 +49,17 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     color: #333;
+    max-width: 400px;
 }
 
 .countHandler input {
   width: 40px;
   text-align: center;
   font-weight: bolder;
+}
+
+.dashed {
+  border-top: 3px dashed #6E260E;
 }
 
 .checkout button {
@@ -74,6 +80,21 @@
   align-items: center;
   font-size: 30px;
   color: #6E260E;
+}
+.price {
+  color: darkgreen;
+  font-weight: bold;
+  font-size: 15px;
+}
+.bake {
+  width: 200px;
+  align-items: center;
+}
+
+.animation-bake{
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Responsive styles */

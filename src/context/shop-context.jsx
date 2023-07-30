@@ -39,18 +39,19 @@ export const ShopContextProvider = (props) => {
   const addToCart = (itemId) => {
     setCartItemObject((prevCartItems) => ({
       ...prevCartItems,
-      [itemId]: (prevCartItems[itemId] || 0) + 1, }));
+      [itemId]: (prevCartItems? prevCartItems[itemId] || 0: 0) + 1, }));
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
 
   const removeFromCart = (itemId) => {
     setCartItemObject((prevCartItems) => {
       const newCartItems = { ...prevCartItems };
-      if (newCartItems[itemId] > 1) {
+      if (newCartItems[itemId] >= 1) {
         newCartItems[itemId] -= 1;
-      } else {
-        delete newCartItems[itemId];
-      }});
+      }
+    });
+    console.log("remove: ", itemId)
+
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 

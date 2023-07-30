@@ -15,6 +15,7 @@ export const Cart = () => {
     <div className="cart">
       <div>
         <h1 className="">Your Cart Items</h1>
+        <hr class="dashed"/>
       </div>
       <div className="cart">
         {PRODUCTS.map((product) => {
